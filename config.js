@@ -1,9 +1,9 @@
 const config = {
     user: "root",
-    pword: "root", // windows users leave this blank
+    pword: "", // windows users leave this blank
     host: "localhost",
-    port: "8889", // windows users - sql port is 3306
-    database: "marvelcharacters"
-}
+    port: "3306", // windows users - sql port is 3306
+    database: "waltdisney"
+};
 
 module.exports = config;

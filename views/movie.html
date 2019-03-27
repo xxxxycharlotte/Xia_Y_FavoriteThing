@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="/stylesheets/subpage.css">
+</head>
+
+<body>
+    {{> header_subpage}}
+    <main class="container subpage">
+        <div class="row">
+            <div class="col-12 col-md-4 poster-wrap">
+                <img src="/images/{{movie.poster}}" alt="{{movie.shortname}}">
+                <ul>
+                    <li>Release date: {{movie.releasedate}} ({{movie.country}})</li>
+                    <li>Director: {{movie.director}}</li>
+                    <li>Duration: {{movie.duration}} minutes</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 descr-wrap">
+                <h2 class="text-center">{{movie.name}}</h2>
+                <p>
+                    {{movie.descr}}
+                </p>
+                <h3 class="text-center">Fictional character</h3>
+                <div class="characters text-center">
+                    {{#movie.characters}}
+                    <a href="#" class="character">
+                        <img src="/images/{{image}}" alt="Character">
+                        <div class="caption text-center">{{name}}</div>
+                    </a>
+                    {{/movie.characters}}
+                </div>
+            </div>
+        </div>
+    </main>
+    {{> footer}}
+</body>
+
+</html>

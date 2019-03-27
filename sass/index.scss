@@ -1,0 +1,117 @@
+
+header.home {
+    height: 65vw;
+    background: {
+        image: url("../images/walt-disney_studio.jpg");
+        size: 100% 100%;
+        repeat: none;
+    }
+    .nav-wrap {
+        a.nav-item {
+            color: #FFF;
+            background: {
+                color: rgba(255, 255, 255, .75);
+            }
+            &:hover {
+                color: #6F97D8;
+                background: {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .btn-wrap {
+        bottom: .5em;
+        a {
+            width: 12em;
+            background: {
+                color: #E5004F;
+            }
+            &:hover {
+                text-shadow: 0 0 .5em #E5004F;
+                box-shadow: 0 0 .5em #E5004F;
+            }
+        }
+    }
+}
+
+main.home {
+    .posters {
+        padding: {
+            top: 2em;
+            bottom: 2em;
+        }
+        .poster {
+            padding: {
+                top: 1em;
+                bottom: 1em;
+            }
+            .image-wrap {
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: .5em;
+                    transition: transform .2s, box-shadow .4s;
+                }
+                &:hover img {
+                    box-shadow: .5em .5em .5em rgba(23, 128, 194, .25);
+                    transition: transform .2s, box-shadow .2s;
+                    transform: translate3d(-.5em, -.5em, 0);
+                }
+            }
+            .poster-caption {
+                padding: {
+                    top: .5em;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 1.1em;
+                    padding: {
+                        top: .4em;
+                        bottom: .4em;
+                    }
+                    width: 80%;
+                    color: #FFF;
+                    background: {
+                        color: #1780C2;
+                    }
+                    border: {
+                        radius: .2em;
+                    }
+                    &:hover {
+                        text-shadow: 0 0 .5em #FFF;
+                        box-shadow: 0 0 .5em #1780C2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    header.home {
+        height: 50vw;
+    }
+}
+
+@media (min-width: 768px) {
+    header.home {
+        height: 45vw;
+        .nav-wrap {
+            a.nav-item {
+                color: #FFF;
+                background: {
+                    color: rgba(255, 255, 255, .15);
+                }
+                &:hover {
+                    color: #6F97D8;
+                    background: {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
